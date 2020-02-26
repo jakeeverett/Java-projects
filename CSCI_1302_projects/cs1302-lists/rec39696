@@ -1,0 +1,99 @@
+cs1302-lists:
+total 40
+drwxr-xr-x 4 ugrad  4096 Oct  1 16:06 ?
+-rw-r--r-- 1 ugrad  1904 Oct  1 16:00 pom.xml
+-rw-r--r-- 1 ugrad 21977 Oct  1 16:00 README.md
+-rw-r--r-- 1 ugrad     0 Oct 12 08:55 rec39696
+drwxr-xr-x 4 ugrad  4096 Oct  1 16:00 src
+drwxr-xr-x 5 ugrad  4096 Oct 12 08:53 target
+
+cs1302-lists/?:
+total 0
+
+cs1302-lists/src:
+total 8
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 main
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 test
+
+cs1302-lists/src/main:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 java
+
+cs1302-lists/src/main/java:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 cs1302
+
+cs1302-lists/src/main/java/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Oct 12 08:53 lists
+
+cs1302-lists/src/main/java/cs1302/lists:
+total 60
+-rw-r--r-- 1 ugrad  9691 Oct 12 08:51 ArrayGenList.java
+-rw-r--r-- 1 ugrad  9904 Oct 12 08:23 ArrayGenList.java~
+-r--r--r-- 1 ugrad  1499 Oct  1 16:00 Box.java
+-r--r--r-- 1 ugrad  7005 Oct  1 16:00 GenList.java
+-rw-r--r-- 1 ugrad 10741 Oct 12 08:27 SortedArrayGenList.java
+-rw-r--r-- 1 ugrad  9191 Oct 10 12:25 SortedArrayGenList.java~
+
+cs1302-lists/src/test:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 java
+
+cs1302-lists/src/test/java:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct  1 16:00 cs1302
+
+cs1302-lists/src/test/java/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Oct  1 16:00 lists
+
+cs1302-lists/src/test/java/cs1302/lists:
+total 4
+-rw-r--r-- 1 ugrad 1004 Oct  1 16:00 BoxTest.java
+
+cs1302-lists/target:
+total 12
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 classes
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 generated-sources
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 maven-status
+
+cs1302-lists/target/classes:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 cs1302
+
+cs1302-lists/target/classes/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Oct 12 08:53 lists
+
+cs1302-lists/target/classes/cs1302/lists:
+total 24
+-rw-r--r-- 1 ugrad 4668 Oct 12 08:53 ArrayGenList.class
+-rw-r--r-- 1 ugrad 1133 Oct 12 08:53 Box.class
+-rw-r--r-- 1 ugrad 1219 Oct 12 08:53 GenList.class
+-rw-r--r-- 1 ugrad 5730 Oct 12 08:53 SortedArrayGenList.class
+
+cs1302-lists/target/generated-sources:
+total 4
+drwxr-xr-x 2 ugrad 4096 Oct 12 08:53 annotations
+
+cs1302-lists/target/generated-sources/annotations:
+total 0
+
+cs1302-lists/target/maven-status:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 maven-compiler-plugin
+
+cs1302-lists/target/maven-status/maven-compiler-plugin:
+total 4
+drwxr-xr-x 3 ugrad 4096 Oct 12 08:53 compile
+
+cs1302-lists/target/maven-status/maven-compiler-plugin/compile:
+total 4
+drwxr-xr-x 2 ugrad 4096 Oct 12 08:53 default-compile
+
+cs1302-lists/target/maven-status/maven-compiler-plugin/compile/default-compile:
+total 8
+-rw-r--r-- 1 ugrad 120 Oct 12 08:53 createdFiles.lst
+-rw-r--r-- 1 ugrad 384 Oct 12 08:53 inputFiles.lst
+/home/ugrads/everett/CSCI_1302_projects/cs1302-lists:/home/work/cs1302a

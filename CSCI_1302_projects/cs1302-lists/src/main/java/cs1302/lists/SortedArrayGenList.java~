@@ -1,0 +1,291 @@
+//TODO add coments and javadocs
+package cs1302.list;
+public class SortedArrayGenList<T extends Comparable<T>> implements GenList<T>{
+	private int size;
+	private Box<T>[] sortedBoxy;
+
+	public SortedArrayGenList() {
+		size = 0;
+		sortedBoxy = Box.<T>array(10);
+	}
+
+
+	public void extendArray() {
+		int length = sortedBoxy.length;
+		Box<T>[] holder = Box.<T>array(length+10);
+		for (int i = 0;i<length;i++) {
+			holder[i] = sortedBoxy[i];
+		}
+		sortedBoxy = holder;
+		//this.arrayLcheck +=10;
+	}
+	
+	public void add(T elem) throws NullPointerException { //this method is to long and will need to be shortedned, But it seams to work
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		while (size > sortedBoxy.length) {
+			this.extendArray();;
+		}
+		if (this.size()==0) {//if the array has nothing in it the elem is added to the first position in the array
+			this.sortedBoxy[0] = new Box<T>(elem);
+		}
+		else {
+			this.incersion(elem);
+		}
+	}
+	
+	public void incersion(T elem) {//this bit is just the insercion section I wrote for the add method in its own class
+		int length = sortedBoxy.length;//filing a holder here, called copy
+		Box<T>[] holder = Box.<T>array(length+1);
+		for (int i =0; i<length;i++) {//asssigning all of sortedBoxy to a holder array
+			holder[i] = sortedBoxy[i];
+		}
+		boolean largest = true;
+		for(int i=0;i<this.size();i++) {//do i use this.size here? what it is it refering to??? because sortedbox.size() dosent work
+			if (sortedBoxy[i].get().compareTo(elem)>=0) { //if the test elem is less or eq to the elem at i in sortedBoxy it is added to the ith index in holder and then holder is shifted right by one
+				holder[i] = new Box<T>(elem);
+				for (int j =i;j<this.size();j++) {
+					holder[j+1] = sortedBoxy[j];
+				}
+				sortedBoxy = holder;
+				size++;
+				largest = false;//this checks to see if there is an elemnt lower than the test element in the array
+				break;
+			}
+		}
+		if (largest == true) {//if the elem is the largest it is added to the end of the array here
+			this.sortedBoxy[this.size()] = new Box<T>(elem);
+			size++;
+		}
+	}
+	
+	
+	
+	public void add(int index, T elem) throws NullPointerException, IndexOutOfBoundsException {
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		if ((index < 0 || index > size())) {
+			throw new IndexOutOfBoundsException("TO_FAR");
+		}
+		this.add(elem);
+	}
+	
+	/**
+	 * Returns the number of elements in this list. If this list contains more 
+	 * than <code>Integer.MAX_VALUE</code> elements, return 
+	 * <code>Integer.MAX_VALUE</code>.
+	 * @return the number of elements in this list
+	 */
+	public int size() {
+		int counter=0;
+		for (int i =0;i<sortedBoxy.length;i++) {
+			if (sortedBoxy[i]!=null) {
+				counter++;
+			}
+		}
+		return counter;
+	}
+	
+	/**
+	 * Returns the element at the specified position in this list.
+	 * @param index index of the element to return
+	 * @return the element at the specified position in this list
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *         {@code (index < 0 || index >= size())}
+	 */
+	public T get(int index) throws IndexOutOfBoundsException {
+		if ((index < 0 || index > size())) {
+			throw new IndexOutOfBoundsException("TOO FAR");
+		}
+		T a = sortedBoxy[index].get();
+		return a;
+	}
+	
+	/**
+	 * Returns <code>true</code> if this list contains the specified element. 
+	 * More formally, returns <code>true</code> if and only if this list 
+	 * contains at least one element <code>o</code> such that 
+	 * <code>o.equals(elem)</code>.
+	 * @param elem element whose presence in this list is to be tested
+	 * @return <code>true</code> if this list contains the specified element
+	 * @throws NullPointerException if elem is null
+	 */
+	public boolean contains(T elem) throws NullPointerException {
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		boolean test = false;
+		for(int i=0;i<sortedBoxy.length;i++) {
+			if (sortedBoxy[i] != null) {
+				if (sortedBoxy[i].get().equals(elem)) {
+					test = true;
+				}
+			}
+		}
+		return test;
+	}
+	
+	
+	/** 
+	 * Compares the specified list with this list for equality. Returns 
+	 * <code>true</code> if and only if the specified object is also a 
+	 * <code>GenList</code>, both lists have the same size, and all corresponding 
+	 * pairs of elements in the two lists are equal.
+	 * If <code>list</code> is a list of the same list type, then students
+	 * may safely cast the object to the appropriat list type when implementing
+	 * this method.
+	 * @param list the object to be compared for equality with this list
+	 * @return <code>true</code> if the specified object is equal to this list
+	 */
+	public boolean equals(Object list) {
+		boolean test = true; //how do we test if Object == T
+		System.out.println("test1, class1: "+list.getClass()+" Class2: "+this.getClass());
+		if (list instanceof GenList) {//this is the typecast safety check
+			System.out.println("Step into class if: passed");
+			GenList<T> t = (GenList) list;//need to check the list type before we can typecast
+			if (t.size() == this.size()) {
+				System.out.println("Step into size if: passed");
+				for (int i = 0;i<this.size();i++) {
+					if (this.get(i).equals(t.get(i))!=true) {
+						test = false;
+					}
+				}
+			}
+			else {
+				test = false;
+			}
+		}
+		else {
+			test = false;
+		}
+		return test;//TODO kindof seams to work but not really sure
+	}
+	
+	
+	/**
+	 * Replaces the element at the specified position in this list with the 
+	 * specified element
+	 * @param index index of the element to replace
+	 * @param elem element to be stored at the specified position
+	 * @return the element previously at the specified position
+	 * @throws NullPointerException if the specified element is null
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *         {@code (index < 0 || index >= size())}
+	 */
+	public T set(int index, T elem) throws NullPointerException, IndexOutOfBoundsException {
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		if ((index < 0 || index > size())) {
+			throw new IndexOutOfBoundsException("TO_FAR");
+		}
+		while (index>sortedBoxy.length) {
+			this.extendArray();
+		}
+		T holder = this.sortedBoxy[index].get();
+		sortedBoxy[index].set(elem);
+		return holder;
+	}
+
+	
+	/**
+	 * Returns true if and only if this list contains no elements.
+	 * @return <code>true</code> if this list contains no elements
+	 */ 
+	public boolean isEmpty() {
+		boolean test = true;
+		for (int i =0;i<sortedBoxy.length;i++) {
+			if (sortedBoxy[i]!=null) {
+				test = false;
+			}
+		}
+		return test;
+	}
+	
+	/**
+	 * Returns the index of the first occurrence of the specified element in 
+	 * this list, or -1 if this list does not contain the element.
+	 * @param elem element to search for
+	 * @return the index of the first occurrence of the specified element in 
+	 *         this list, or -1 if this list does not contain the element
+	 * @throws NullPointerException if elem is null
+	 */
+	public int indexOf(T elem) throws NullPointerException {
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		if (this.contains(elem)) {
+			int loc[] = new int[sortedBoxy.length];
+			int counter =0;
+			for(int i=0;i<sortedBoxy.length;i++) {
+				if (sortedBoxy[i] != null) {
+					if (sortedBoxy[i].get().equals(elem)) {
+						loc[counter] = i;
+						counter++;
+					}
+				}
+	
+			}
+			return loc[0];
+		}
+		else {
+			return -1;
+		}
+	}
+	
+	/** 
+	 * Removes the first occurrence of the specified element from this list, if 
+	 * it is present. If this list does not contain the element, it is 
+	 * unchanged. More formally, removes the element with the lowest index 
+	 * <code>i</code> such that <code>elem.equals(get(i))</code> (if such an 
+	 * element exists). Returns <code>true</code> if this list contained the 
+	 * specified element (or equivalently, if this list changed as a result of 
+	 * the call).
+	 * @param elem element to be removed from this list, if present
+	 * @return <code>true</code> if this list contained the specified element
+	 * @throws NullPointerException if elem is null
+	 */
+	public boolean remove(T elem) throws NullPointerException {
+		if (elem == null) {
+			throw new NullPointerException("NULL");
+		}
+		//i added a decrement for size and arrayLcheck might need to change this later though
+		boolean test = false;
+		int loc = this.indexOf(elem);
+		if (loc!=-1) {
+			Box<T>[] holder = Box.<T>array(sortedBoxy.length-1);//going to have to change the size and then the arrayLcheck
+			for (int j=0;j<this.size();j++) {
+				if (loc>j) {
+					holder[j]= sortedBoxy[j];
+				}
+				else if (loc<j) {
+					//System.out.println("working");
+					holder[j-1]= sortedBoxy[j];
+				}
+			}
+			sortedBoxy = holder;
+			this.size--;//might need to remove this line or change it some how
+			test = true;
+		}
+		return test;
+	}
+
+	
+	/** 
+	 * Removes all of the elements from this list. The list will be empty after 
+	 * this call returns.
+	 */
+	//note this method should work now, still need to do more extensive test
+	public void clear() {
+		for (int i =0; i<sortedBoxy.length;i++) {//this needed to be for boxy.length
+			sortedBoxy[i] = null;
+		}
+		size =0;//I came back and set the size to zero might need to remove this later on.
+	}
+	
+	
+	
+}
+

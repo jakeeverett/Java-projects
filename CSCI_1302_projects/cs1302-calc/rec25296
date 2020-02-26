@@ -1,0 +1,87 @@
+cs1302-calc:
+total 240
+-rw-r--r-- 1 ugrad 90693 Nov 14 19:19 hs_err_pid51675.log
+-rw-r--r-- 1 ugrad 90789 Nov 14 19:20 hs_err_pid51770.log
+-rw-r--r-- 1 ugrad   205 Nov 11 13:05 Makefile
+-rw-r--r-- 1 ugrad  1934 Nov 11 13:05 pom.xml
+-rw-r--r-- 1 ugrad 26277 Nov 11 13:05 README.md
+-rw-r--r-- 1 ugrad     0 Nov 26 12:40 rec25296
+-rw-r--r-- 1 ugrad  2663 Nov 25 16:43 rec39992
+-rw-r--r-- 1 ugrad  2756 Nov 26 11:39 rec5499
+-rw-r--r-- 1 ugrad  2710 Nov 26 11:27 rec62964
+drwxr-xr-x 3 ugrad  4096 Nov 11 13:05 src
+drwxr-xr-x 5 ugrad  4096 Nov 11 13:05 target
+
+cs1302-calc/src:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 main
+
+cs1302-calc/src/main:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 java
+
+cs1302-calc/src/main/java:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 cs1302
+
+cs1302-calc/src/main/java/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Nov 15 10:19 calc
+
+cs1302-calc/src/main/java/cs1302/calc:
+total 60
+-rw-r--r-- 1 ugrad  1206 Nov 11 13:05 BasicMathOps.java
+-rw-r--r-- 1 ugrad 25985 Nov 26 12:39 CalcApp.java
+-rw-r--r-- 1 ugrad  3832 Nov 26 11:35 IterativeMathOps.java
+-rw-r--r-- 1 ugrad  5807 Nov 11 13:05 MathOpsEvaluator.java
+-rw-r--r-- 1 ugrad  3033 Nov 11 13:05 MathOps.java
+-rw-r--r-- 1 ugrad  3713 Nov 15 10:19 #RecursiveMathOps.java#
+-rw-r--r-- 1 ugrad  4134 Nov 26 11:38 RecursiveMathOps.java
+
+cs1302-calc/target:
+total 12
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 classes
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 generated-sources
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 maven-status
+
+cs1302-calc/target/classes:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 cs1302
+
+cs1302-calc/target/classes/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Nov 26 12:39 calc
+
+cs1302-calc/target/classes/cs1302/calc:
+total 48
+-rw-r--r-- 1 ugrad  1251 Nov 26 12:39 BasicMathOps.class
+-rw-r--r-- 1 ugrad 23538 Nov 26 12:39 CalcApp.class
+-rw-r--r-- 1 ugrad  1738 Nov 26 12:39 IterativeMathOps.class
+-rw-r--r-- 1 ugrad   717 Nov 26 12:39 MathOps.class
+-rw-r--r-- 1 ugrad  4253 Nov 26 12:39 MathOpsEvaluator.class
+-rw-r--r-- 1 ugrad  1642 Nov 26 12:39 RecursiveMathOps.class
+
+cs1302-calc/target/generated-sources:
+total 4
+drwxr-xr-x 2 ugrad 4096 Nov 11 13:05 annotations
+
+cs1302-calc/target/generated-sources/annotations:
+total 0
+
+cs1302-calc/target/maven-status:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 maven-compiler-plugin
+
+cs1302-calc/target/maven-status/maven-compiler-plugin:
+total 4
+drwxr-xr-x 3 ugrad 4096 Nov 11 13:05 compile
+
+cs1302-calc/target/maven-status/maven-compiler-plugin/compile:
+total 4
+drwxr-xr-x 2 ugrad 4096 Nov 11 13:05 default-compile
+
+cs1302-calc/target/maven-status/maven-compiler-plugin/compile/default-compile:
+total 8
+-rw-r--r-- 1 ugrad 188 Nov 26 12:39 createdFiles.lst
+-rw-r--r-- 1 ugrad 578 Nov 26 12:38 inputFiles.lst
+/home/ugrads/everett/CSCI_1302_projects/cs1302-calc:/home/work/cs1302a

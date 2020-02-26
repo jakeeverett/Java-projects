@@ -1,0 +1,67 @@
+cs1302-latin-squares-recovery:
+total 64
+drwxr-xr-x 3 ugrad  4096 Sep 19 11:23 ?
+drwxr-xr-x 4 ugrad  4096 Sep 19 11:23 bin
+-rw-r--r-- 1 ugrad 33166 Sep 19 11:23 README.md
+-rw-r--r-- 1 ugrad     0 Sep 19 12:05 rec14527
+-rw-r--r-- 1 ugrad  1905 Sep 19 11:23 rec52374
+-rw-r--r-- 1 ugrad  1858 Sep 19 11:23 rec77244
+-rw-r--r-- 1 ugrad   133 Sep 19 11:59 RECOVERY.md
+drwxr-xr-x 3 ugrad  4096 Sep 19 11:23 src
+drwxr-xr-x 3 ugrad  4096 Sep 19 11:23 tests
+
+cs1302-latin-squares-recovery/?:
+total 0
+
+cs1302-latin-squares-recovery/bin:
+total 8
+drwxr-xr-x 3 ugrad 4096 Sep 19 11:23 ?
+drwxr-xr-x 3 ugrad 4096 Sep 19 11:23 cs1302
+
+cs1302-latin-squares-recovery/bin/?:
+total 0
+
+cs1302-latin-squares-recovery/bin/cs1302:
+total 4
+drwxr-xr-x 2 ugrad 4096 Sep 19 11:23 game
+
+cs1302-latin-squares-recovery/bin/cs1302/game:
+total 12
+-rw-r--r-- 1 ugrad  401 Sep 19 12:03 LatinSquaresDriver.class
+-rw-r--r-- 1 ugrad 7373 Sep 19 12:03 LatinSquaresGame.class
+
+cs1302-latin-squares-recovery/src:
+total 4
+drwxr-xr-x 3 ugrad 4096 Sep 19 11:23 cs1302
+
+cs1302-latin-squares-recovery/src/cs1302:
+total 4
+drwxr-xr-x 3 ugrad 4096 Sep 19 12:02 game
+
+cs1302-latin-squares-recovery/src/cs1302/game:
+total 48
+drwxr-xr-x 3 ugrad  4096 Sep 19 11:23 ?
+-rw-r--r-- 1 ugrad   371 Sep 19 11:23 LatinSquaresDriver.java
+-rw-r--r-- 1 ugrad   253 Sep 19 11:23 LatinSquaresDriver.java~
+-rw-r--r-- 1 ugrad 15005 Sep 19 11:52 LatinSquaresGame.java
+-rw-r--r-- 1 ugrad 16612 Sep 19 11:41 LatinSquaresGame.java~
+
+cs1302-latin-squares-recovery/src/cs1302/game/?:
+total 0
+
+cs1302-latin-squares-recovery/tests:
+total 40
+drwxr-xr-x 3 ugrad 4096 Sep 19 11:23 ?
+-rw-r--r-- 1 ugrad    8 Sep 19 11:23 tc01.config.txt
+-rw-r--r-- 1 ugrad    2 Sep 19 11:23 tc01.in.txt
+-rw-r--r-- 1 ugrad  494 Sep 19 11:23 tc01.out.txt
+-rw-r--r-- 1 ugrad   20 Sep 19 11:23 tc02.config.txt
+-rw-r--r-- 1 ugrad    2 Sep 19 11:23 tc02.in.txt
+-rw-r--r-- 1 ugrad  494 Sep 19 11:23 tc02.out.txt
+-rw-r--r-- 1 ugrad   20 Sep 19 11:23 tc03.config.txt
+-rw-r--r-- 1 ugrad   12 Sep 19 11:23 tc03.in.txt
+-rw-r--r-- 1 ugrad 1286 Sep 19 11:23 tc03.out.txt
+
+cs1302-latin-squares-recovery/tests/?:
+total 0
+/home/ugrads/everett/CSCI_1302_projects/cs1302-latin-squares-recovery:/home/work/cs1302a

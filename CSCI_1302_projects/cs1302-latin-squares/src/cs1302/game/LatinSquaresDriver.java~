@@ -1,0 +1,10 @@
+package cs1302.game;
+
+public class LatinSquaresDriver {
+
+	public static void main(String[] args) {
+	    	LatinSquaresGame game = new LatinSquaresGame(args[0]);//this will need to be changed so that it pulls from the test nike file
+			game.play();
+	}
+
+}
